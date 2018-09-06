@@ -1,3 +1,5 @@
+export const title = "Schedule"
+
 export const friday = [
   {
     time: "4:30 PM",

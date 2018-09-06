@@ -41,7 +41,7 @@ export const cards = [
     icon: "https://icon.now.sh/bitcoin/ffffff",
     title: "Sponsors",
     href: "../static/sponsors.pdf",
-    text: "Want to recruit and mentor our hackers? View our tiers →"
+    text: "Want to recruit & mentor our hackers? View tiers →"
   },
   {
     icon: "https://icon.now.sh/format_shapes/ffffff",
