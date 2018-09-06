@@ -4,6 +4,7 @@ import { injectGlobal } from 'styled-components'
 import Head from '../components/head'
 import Nav from '../components/nav'
 import Intro from '../components/intro'
+import Calendar from '../components/calendar'
 
 // Ensure `grid-styled` Box and Flex components work properly.
 injectGlobal`
@@ -35,6 +36,7 @@ const Home = () => (
     <Head title={title} description={description} url={url} ogImage={ogImage} />
     <Nav />
     <Intro />
+    <Calendar />
   </Provider>
 )
 
