@@ -1,16 +1,13 @@
 import Link from "next/link"
 import { Box, Container, Card, Flex, Image, theme } from 'rebass'
+import { intro, bullets, cards } from '../content/intro'
 import colors from '../styles/colors.json'
-import { bullets, cards } from '../content/intro'
 
 const Intro = () => (
   <div>
-    <Container>
-      <Image src="../static/sallyport.svg" width={500}/>
-    </Container>
-    <Box px={3} pt={3} pb={4} color={colors['base']} bg={colors['gray'][1]}>
+    <Box px={3} pt={3} pb={4} bg={colors['base']} color={colors['gray'][1]}>
         <Box width='auto' px={2}>
-          <h1 className="introText">The premier hackathon of the south.</h1>
+          <h1 className="introText">{intro}</h1>
           {bullets.map(({ key, href, button, note, icon }) => (
             <div className="introItem">
               <img className="icon" src={icon}></img>
@@ -55,7 +52,7 @@ const Intro = () => (
       a.styledlink {
         color: #fff;
         text-decoration: none;
-        background: rgba(97, 100, 178, 0.8);
+        background: rgba(255, 255, 255, 0.1);
         transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
         padding: 3px 5px;
         margin: 3px;
@@ -65,8 +62,8 @@ const Intro = () => (
       }
 
       a.styledlink:hover {
-        color: #fff;
-        background: rgb(97, 100, 178, 1);
+        color: #6164b2;
+        background: rgba(255, 255, 255, 1);
       }
 
       .icon {
@@ -85,14 +82,15 @@ const Intro = () => (
       }
 
       .card {
-        border: 1px solid ${colors['base']};
-        color: ${colors['base']};
+        border: 1px solid ${colors['gray'][1]};
+        color: ${colors['gray'][1]};
+        font-family: 'Overpass Mono', monospace;
         margin: 10px;
         min-height: 110px !important;
         padding: 18px 18px 18px;
         text-align: left;
         text-decoration: none;
-        transition: border-color 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+        transition: border-color 0.3s ease-in-out, background 0.3s ease-in-out;
       }
 
       .cardTitle {
@@ -100,8 +98,8 @@ const Intro = () => (
       }
 
       .card:hover {
-        color: #fff;
-        background: ${colors['base']};
+        background: rgba(255, 255, 255, 0.1);
+        cursor: pointer;
       }
 
       .card h3 {
@@ -113,6 +111,7 @@ const Intro = () => (
         margin: 0;
         padding: 12px 0 0;
         font-size: 13px;
+        font-weight: 300;
       }
 
       @media (max-width: 575px) {
