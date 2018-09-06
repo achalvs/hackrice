@@ -1,0 +1,6 @@
+export const title = "What is HackRice?"
+export const p1 = "HackRice is a hackathon held bi-annually at Rice University. It brings together over four hundred of the brightest minds to develop & showcase their creative and entrepreneurial talents."
+export const p2 = "Participants join into teams <= 4 to work on a project—typically software, and sometimes hardware—in an environment designed for collaboration."
+export const p3 = "Teams showcase projects after 36 hours of hacking, giving them an opportunity to build a network of creators, receive internship & job offers from world-class sponsors, and learn modern tools & systems."
+export const button1 = "I want to apply."
+export const button2 = "I want to become a sponsor."
