@@ -5,11 +5,11 @@ import colors from '../styles/colors.json'
 const Calendar = () => (
   <Box mt={2} mx={-2} bg={colors['gray'][1]} color={colors['base']}>
     <Box mx={4} pt={3}>
-      <h1 className="calTitle">Schedule</h1>
+      <h2 className="calTitle">Schedule</h2>
     </Box>
     <Flex mt={1} mx={4}>
-      <Box width={[1, 1/3]}>
-        <h2>Friday</h2>
+      <Box width={[1, 1/3]} mx={1}>
+        <h2 className="calDay">Friday 9/14</h2>
         <ul className="scheduleDay">
           {friday.map(({ key, title, time, detail }) => (
             <li className="scheduleItem">
@@ -20,8 +20,8 @@ const Calendar = () => (
           ))}
         </ul>
       </Box>
-      <Box width={[1, 1/3]}>
-        <h2>Saturday</h2>
+      <Box width={[1, 1/3]} mx={1}>
+        <h2 className="calDay">Saturday 9/15</h2>
         <ul className="scheduleDay">
           {saturday.map(({ key, title, time, detail }) => (
             <li className="scheduleItem">
@@ -32,8 +32,8 @@ const Calendar = () => (
           ))}
         </ul>
       </Box>
-      <Box width={[1, 1/3]}>
-        <h2>Sunday</h2>
+      <Box width={[1, 1/3]} mx={1}>
+        <h2 className="calDay">Sunday 9/16</h2>
         <ul className="scheduleDay">
           {sunday.map(({ key, title, time, detail }) => (
             <li className="scheduleItem">
@@ -57,6 +57,12 @@ const Calendar = () => (
         background: ${colors['base']};
         color: #fff;
         padding: 2px 10px;
+      }
+
+      .calDay {
+        font-size: 1.2em;
+        font-weight: 600;
+        text-transform: uppercase;
       }
 
       .scheduleDay {
@@ -83,7 +89,7 @@ const Calendar = () => (
 
       .scheduleItem:hover {
         box-shadow: 0px 3px 5px 2px rgba(97, 100, 178, 0.05);
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
 
       .scheduleDay ul li {

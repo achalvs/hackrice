@@ -6,7 +6,7 @@ export const friday = [
   },
   {
     time: "5 – 6:30 PM",
-    title: "Hacker Registration",
+    title: "Main Registration",
     detail: "Come to the Grand Hall to check into the event.",
   },
   {
