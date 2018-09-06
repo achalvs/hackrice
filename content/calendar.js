@@ -5,17 +5,17 @@ export const friday = [
     detail: "Registration begins for Rice students.",
   },
   {
-    time: "5:00 – 6:30 PM",
+    time: "5 – 6:30 PM",
     title: "Hacker Registration",
     detail: "Come to the Grand Hall to check into the event.",
   },
   {
-    time: "5:00 – 7:00 PM",
+    time: "5 – 7:00 PM",
     title: "Sponsor Setup",
     detail: "Sponsors will arrive, register & set up their tables.",
   },
   {
-    time: "7:00 PM",
+    time: "7 PM",
     title: "Opening Ceremonies",
     detail: "The event will formally begin with a bit about rules & guidelines, and a word from sponsors.",
   },
@@ -25,12 +25,12 @@ export const friday = [
     detail: "Enjoy food from Thai Cottage and meet other hackers to form teams (if you haven't already).",
   },
   {
-    time: "8:00 PM",
+    time: "8 PM",
     title: "Hacking Begins!",
     detail: "Start building your project!.",
   },
   {
-    time: "11:00 PM",
+    time: "11 PM",
     title: "Late Night...",
     detail: "Tiff's Treats cookies...",
   }
@@ -41,17 +41,17 @@ export const friday = [
 
 export const saturday = [
   {
-    time: "9:00 AM",
+    time: "9 AM",
     title: "Breakfast",
     detail: "Bagels from Einstein Bros!",
   },
   {
-    time: "12:00 PM",
+    time: "12 PM",
     title: "Lunch",
     detail: "Potbelly Sandwiches for lunch.",
   },
   {
-    time: "8:00 PM",
+    time: "8 PM",
     title: "Dinner",
     detail: "Tacos-a-Go-Go for our happy hackers!",
   },
@@ -67,7 +67,7 @@ export const sunday = [
     detail: "Judges will have arrived, prepared to evaluate hackers & projects.",
   },
   {
-    time: "9:00 AM",
+    time: "9 AM",
     title: "Hacking Ends!",
     detail: "Submissions close on DevPost.",
   },
@@ -77,17 +77,17 @@ export const sunday = [
     detail: "Judging commences at the tables in the Grand Hall.",
   },
   {
-    time: "11:00 AM",
+    time: "11 AM",
     title: "Brunch",
     detail: "Kolaches from Kolache Factory...",
   },
   {
-    time: "1:00 PM",
+    time: "1 PM",
     title: "Closing Ceremony",
     detail: "Winners will be announced and prizes awarded",
   },
   {
-    time: "2:00 PM",
+    time: "2 PM",
     title: "Finale!",
     detail: "Hope you had a wonderful event, and we look forward to HackRice 9 :)",
   },
