@@ -9,27 +9,27 @@ export const questions = [
   },
   {
     question: "How many hackers per team are permitted?",
-    answer: "Team are limited to 4 hackers. That being said, you don&#39;t have to have 4 hackers to compete.",
+    answer: "Team are limited to 4 hackers. That being said, you don't have to have 4 hackers to compete.",
   },
   {
     question: "Is there a HackRice Facebook page?",
-    answer: <>Yes there is! Click <a href='https://www.facebook.com/hackrice/'>here</a> to access it!</>
+    answer: <>Yes there is! Click <a className="styledlink" href='https://www.facebook.com/hackrice/'>here</a> to access it!</>
   },
   {
     question: "How do I submit my project? Is there a Devpost?",
-    answer: <>You can submit your project on <a href="https://hackrice8.devpost.com/">this Devpost link</a></>,
+    answer: <>You can submit your project on <a className="styledlink" href="https://hackrice8.devpost.com/">this Devpost link</a></>,
   },
   {
     question: "Who is eligible to participate in HackRice?",
-    answer: <>Any current student over the age of 18 is eligible to apply to HackRice. Since we are an MLH member event, participants must also accept the <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a></>,
+    answer: <>Any current student over the age of 18 is eligible to apply to HackRice. Since we are an MLH member event, participants must also accept the <a className="styledlink" href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a></>,
   },
   {
     question: "Will my travel be reimbursed?",
-    answer: <>Yes! Hackers who ride in team cars or take buses or trains to HackRice will receive reimbursement for their travel costs up to $100. <br /><br /> Hackers who fly in will recieve reimbursement on a first-come, first-served basis. Initially, up to $200 will be provided. As funds are exhausted, up to $100 reimbursement will be provided. Tickets must be standard economy or lower.</>,
+    answer: <>Yes! Hackers who ride in team cars or take buses or trains to HackRice will receive reimbursement for their travel costs up to $100. <br /><br /> Hackers who fly in will recieve reimbursement on a first-come, first-served basis. Initially, up to $200 will be provided. As funds are exhausted, up to $100 reimbursement will be provided. <br /> <br /> Tickets must be standard economy or lower.</>,
   },
   {
     question: "Will international travel be reimbursed?",
-    answer: <>We cannot reimburse hackers flying internationally any more than is listed above, and international hackers should contact us at <a href="mailto:officialhackrice@gmail.com">officialhackrice@gmail.com</a></>,
+    answer: <>We cannot reimburse hackers flying internationally any more than is listed above, and international hackers should contact us at <a className="styledlink" href="mailto:officialhackrice@gmail.com">officialhackrice@gmail.com</a></>,
   },
   {
     question: "How do I file for a reimbursement?",
