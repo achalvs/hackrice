@@ -1,0 +1,51 @@
+.rc-collapse {
+  background-color: unset;
+  color: #fff;
+  border: unset;
+  display: flex;
+  justify-content: space-around;
+}
+
+.rc-collapse-header {
+  text-indent: unset !important;
+}
+
+.rc-collapse > .rc-collapse-item:first-child {
+    border-top: 1px solid #fff !important;
+}
+
+.faqCard {
+  border: 1px solid #ecedf0;
+  color: #ecedf0;
+  font-family: 'Overpass Mono', monospace;
+  font-weight: 300;
+  margin: 10px;
+  padding: 18px 18px 18px;
+  text-align: left;
+  text-decoration: none;
+  transition: border-color 0.3s ease-in-out, background 0.3s ease-in-out;
+  height: auto;
+  width: 350px;
+}
+
+.rc-collapse-item-active {
+  height: auto;
+}
+
+.arrow {
+  display: none;
+  content: '';
+  margin-right: 0px !important;
+  border: none !important;
+}
+
+.rc-collapse-header {
+  color: #fff !important;
+  height: unset;
+}
+
+.rc-collapse-content {
+  background-color: unset;
+  color: #fff;
+  padding: 0px;
+}
