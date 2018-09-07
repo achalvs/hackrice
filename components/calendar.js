@@ -3,7 +3,7 @@ import { title, friday, saturday, sunday } from '../content/calendar'
 import colors from '../styles/colors.json'
 
 const Calendar = () => (
-  <Box mx={-2} bg={colors['gray'][1]} color={colors['base']}>
+  <Box mx={-2} style={{background: 'rgba(255, 255, 255, 0.05)'}}bg={colors['white']} color={colors['base']}>
     <Box mx={4} pt={3}>
       <h2 className="calTitle">{title}</h2>
     </Box>
@@ -54,14 +54,15 @@ const Calendar = () => (
       .calTitle {
         display: inline-block;
         text-transform: uppercase;
-        background: ${colors['base']};
-        color: #fff;
+        background: ${colors['gray'][1]};
+        color: ${colors['base']};
         padding: 2px 10px;
       }
 
       .calDay {
         font-size: 1.2em;
         font-weight: 600;
+        color: ${colors['white']};
         text-transform: uppercase;
       }
 
@@ -77,8 +78,9 @@ const Calendar = () => (
       }
 
       .scheduleItem {
-        border: 1px solid ${colors['gray'][2]};
-        background: ${colors['white']};
+        border: 1px solid ${colors['base']};
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
         padding: 8px 10px;
         transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
         margin-bottom: 1em;
@@ -89,8 +91,8 @@ const Calendar = () => (
       }
 
       .scheduleItem:hover {
+        border: 1px solid ${colors['gray'][2]};
         box-shadow: 0px 3px 5px 2px rgba(97, 100, 178, 0.05);
-        border: 1px solid ${colors['base']};
         transform: scale(1.05);
       }
 
@@ -113,7 +115,7 @@ const Calendar = () => (
         font-size: 0.8em;
         font-weight: 400;
         font-family: 'Overpass Mono';
-        background: rgba(97, 100, 178, 0.1);
+        background: rgba(97, 100, 178, 0.5);
         padding: 2px 5px;
       }
 
@@ -123,7 +125,6 @@ const Calendar = () => (
         flex: 1 1 100%;
         font-size: 0.8em;
         margin-top: 0.5em;
-        opacity: 0.7;
       }
 
     `}</style>

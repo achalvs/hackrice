@@ -20,7 +20,7 @@ const Nav = () => (
       <ul>
         <li>
           <Image src='../static/hr8.svg' css={{
-            height: '50px !important'
+            height: '175px !important'
           }} ml={10} />
         </li>
       </ul>
@@ -60,7 +60,7 @@ const Nav = () => (
         flex: 1;
         padding: 6px;
       }
-      
+
       .icon {
         padding: 2px 5px;
       }
