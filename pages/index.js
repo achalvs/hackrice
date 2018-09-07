@@ -6,11 +6,12 @@ import Nav from '../components/nav'
 import Intro from '../components/intro'
 import About from '../components/about'
 import Calendar from '../components/calendar'
+import Questions from '../components/faq'
 
 // Ensure `grid-styled` Box and Flex components work properly.
 injectGlobal`
   * { box-sizing: border-box; }
-  body { margin: 0; color: #fff; }
+  body { max-width: 900px; margin: 2% auto; color: #fff; }
   a {
       color: #fff;
       font-family: 'Overpass Mono';
@@ -39,6 +40,7 @@ const Home = () => (
     <Intro />
     <About />
     <Calendar />
+    <Questions />
   </Provider>
 )
 
