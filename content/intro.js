@@ -1,4 +1,4 @@
-export const intro = "The premier hackathon of the south."
+export const intro = "HackRice 8: the premier hackathon of the south."
 
 export const bullets = [
   {
