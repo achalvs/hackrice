@@ -7,12 +7,12 @@ export const friday = [
     detail: "Registration begins for Rice students.",
   },
   {
-    time: "5 – 6:30 PM",
+    time: "5–6:30 PM",
     title: "Main Registration",
     detail: "Come to the Grand Hall to check into the event.",
   },
   {
-    time: "5 – 7:00 PM",
+    time: "5–7:00 PM",
     title: "Sponsor Setup",
     detail: "Sponsors will arrive, register & set up their tables.",
   },
@@ -58,7 +58,7 @@ export const saturday = [
     detail: "Tacos-a-Go-Go for our happy hackers!",
   },
 ].map(item => {
-  item.key = `item-${item.title}`;
+  item.key = `item-${item.detail}`;
   return item;
 });
 
@@ -94,6 +94,6 @@ export const sunday = [
     detail: "Hope you had a wonderful event, and we look forward to HackRice 9 :)",
   },
 ].map(item => {
-  item.key = `item-${item.title}`;
+  item.key = `item-${item.detail}`;
   return item;
 });

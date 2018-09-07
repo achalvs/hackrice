@@ -1,46 +1,46 @@
-import { Box, Flex, ButtonOutline } from 'rebass'
+import { Box, Flex, Image } from 'rebass'
 import { title, info, p1, p2, p3, button1, button2 } from '../content/about'
 import colors from '../styles/colors.json'
 
 const About = () => (
-  <Flex mx={-2} mt={4} mb={5} flexWrap="wrap">
-    <Box width={1} mx={4}>
+  <Flex mx={2} mt={4} flexWrap="wrap">
+    <Box width={1} mx={2}>
       <h2 className="title">{title}</h2>
     </Box>
-    <Box width={1} mx={4} mb={2}>
-      <div className="blockquote" >
+    <Box width={[1]} mx={2} mb={1}>
       <p>{p1}</p>
       <p>{p2}</p>
       <p>{p3}</p>
       <button>{button1}</button>
       <button>{button2}</button>
-    </div>
     </Box>
+    <Flex justifyContent="center" width={[1]}>
+      <Image style={{maxWidth: '200%', height: '150px', bottom: '0px'}} mt={4} src="../static/sallyport.svg" />
+    </Flex>
     <style jsx>{`
 
       @import url('https://rsms.me/inter/inter-ui.css');
 
       p {
-        font-family: 'Overpass Mono', sans-serif;
         font-weight: 300;
         font-size: 1em;
-        line-height: 1.45em;
-        letter-spacing: -0.35px;
+        line-height: 1.6em;
       }
 
-      .blockquote {
-        border-left: 6px solid ${colors['white']};
-        padding-left: 1.5em;
+      p strong {
+        font-weight: 400 !important;
       }
 
       .title {
         display: inline-block;
         text-transform: uppercase;
-        background: ${colors['gray'][1]};
-        color: ${colors['base']};
-        padding: 2px 10px;
+        color: ${colors['gray'][1]};
         margin: unset;
         font-family: 'Overpass Mono', monospace;
+      }
+
+      .sallyport {
+        height: 80px !important;
       }
 
       button {
@@ -49,7 +49,7 @@ const About = () => (
         color: ${colors['gray'][1]};
         font-family: 'Overpass Mono', monospace;
         font-size: 1em;
-        margin-top: 0.6em;
+        margin-top: 0.4em;
         margin-right: 1em;
         padding: 6px 10px;
         text-transform: uppercase;

@@ -9,7 +9,7 @@ const Intro = () => (
         <Box width='auto' px={2}>
           <h1 className="introText">{intro}</h1>
           {bullets.map(({ key, href, button, note, icon }) => (
-            <div className="introItem">
+            <div key={key} className="introItem">
               <img className="icon" src={icon}></img>
               <a href={href} className="styledlink">
                 {button}
@@ -21,7 +21,7 @@ const Intro = () => (
         </Box>
         <Flex flexWrap="wrap" mx={-2} pt={2}>
           {cards.map(({ key, href, title, text, icon }) => (
-            <Box className="cardContainer" width={[1, 1/2, 1/3, 1/6]}>
+            <Box key={key} width={[1, 1/2, 1/3]}>
               <Link href={href}>
                 <div className="card">
                   <h3>
@@ -36,7 +36,7 @@ const Intro = () => (
           ))}
       </Flex>
     </Box>
-    <style jsx>{`
+    <style jsx global>{`
 
       .introText {
         font-family: 'Overpass Mono';

@@ -27,7 +27,7 @@ export default class Questions extends React.Component {
     let cols = []
 
     for (let i = 0; i < questions.length; i += shift) {
-        cols.push(<Flex flexWrap="wrap" flexDirection="column" width={1/2} mx={-2} my={4} pt={2}>
+        cols.push(<Flex flexWrap="wrap" flexDirection="column" width={[1, 1/2, 1/3]} mx={-2} my={4} pt={2}>
             {questions.slice(i, i + shift).map(({key, question, answer}) => (
                 <Collapse key={key} accordion={false} onChange={this.onChange} activeKey={state.activeKey}>
                   <Panel className="faqCard" key={key} header={question} headerClass="cardTitle">
