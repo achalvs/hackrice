@@ -1,18 +1,18 @@
 import { Flex, Box } from 'rebass'
-import { friday, saturday, sunday } from '../content/calendar'
+import { title, friday, saturday, sunday } from '../content/calendar'
 import colors from '../styles/colors.json'
 
 const Calendar = () => (
-  <Box mt={2} mx={-2} bg={colors['gray'][1]} color={colors['base']}>
+  <Box mx={-2} bg={colors['gray'][1]} color={colors['base']}>
     <Box mx={4} pt={3}>
-      <h2 className="calTitle">Schedule</h2>
+      <h2 className="calTitle">{title}</h2>
     </Box>
-    <Flex mt={1} mx={4}>
-      <Box width={[1, 1/3]} mx={1}>
+    <Flex my={1} pb={3} mx={4} flexWrap="wrap">
+      <Box width={[1, 1/3]}>
         <h2 className="calDay">Friday 9/14</h2>
         <ul className="scheduleDay">
           {friday.map(({ key, title, time, detail }) => (
-            <li className="scheduleItem">
+            <li key={key} className="scheduleItem">
               <span className="itemTitle">{title}</span>
               <span className="itemTime">{time}</span>
               <span className="itemDetail">{detail}</span>
@@ -20,11 +20,11 @@ const Calendar = () => (
           ))}
         </ul>
       </Box>
-      <Box width={[1, 1/3]} mx={1}>
+      <Box width={[1, 1/3]}>
         <h2 className="calDay">Saturday 9/15</h2>
         <ul className="scheduleDay">
           {saturday.map(({ key, title, time, detail }) => (
-            <li className="scheduleItem">
+            <li key={key} className="scheduleItem">
               <span className="itemTitle">{title}</span>
               <span className="itemTime">{time}</span>
               <span className="itemDetail">{detail}</span>
@@ -32,11 +32,11 @@ const Calendar = () => (
           ))}
         </ul>
       </Box>
-      <Box width={[1, 1/3]} mx={1}>
+      <Box width={[1, 1/3]}>
         <h2 className="calDay">Sunday 9/16</h2>
         <ul className="scheduleDay">
           {sunday.map(({ key, title, time, detail }) => (
-            <li className="scheduleItem">
+            <li key={key} className="scheduleItem">
               <span className="itemTitle">{title}</span>
               <span className="itemTime">{time}</span>
               <span className="itemDetail">{detail}</span>
@@ -78,8 +78,9 @@ const Calendar = () => (
 
       .scheduleItem {
         border: 1px solid ${colors['gray'][2]};
+        background: ${colors['white']};
         padding: 8px 10px;
-        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
         margin-bottom: 1em;
         display: flex;
         flex-flow: row wrap;
@@ -89,6 +90,7 @@ const Calendar = () => (
 
       .scheduleItem:hover {
         box-shadow: 0px 3px 5px 2px rgba(97, 100, 178, 0.05);
+        border: 1px solid ${colors['base']};
         transform: scale(1.05);
       }
 
