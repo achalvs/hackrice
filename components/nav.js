@@ -20,7 +20,7 @@ const Nav = () => (
       <ul>
         <li>
           <Image src='../static/hr8.svg' css={{
-            height: '175px !important'
+            height: '175px !important', paddingRight: '20px'
           }} ml={10} />
         </li>
       </ul>
