@@ -74,10 +74,10 @@ export const cards = [
     text: "Need help finding your way around Rice? →"
   },
   {
-    icon: "https://icon.now.sh/help/ffffff",
-    title: "Help",
+    icon: "https://icon.now.sh/slack/ffffff",
+    title: "Slack",
     href: "",
-    text: "Having an emergency? Can't find the venue? →"
+    text: "Join our Slack to meet hackers & receive updates →"
   }
 ].map(card => {
   card.key = `card-${card.title}`;
