@@ -7,6 +7,8 @@ import Intro from '../components/intro'
 import About from '../components/about'
 import Calendar from '../components/calendar'
 import Questions from '../components/faq'
+import Judging from '../components/judging'
+import Sponsors from '../components/sponsors'
 
 // Ensure `grid-styled` Box and Flex components work properly.
 injectGlobal`
@@ -41,6 +43,8 @@ const Home = () => (
     <About />
     <Calendar />
     <Questions />
+    <Judging />
+    <Sponsors />
   </Provider>
 )
 
