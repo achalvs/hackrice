@@ -7,15 +7,24 @@
 }
 
 .rc-collapse-header {
+  font-family: 'Overpass Mono', monospace;
   text-indent: unset !important;
 }
 
+.rc-collapse-header:focus {
+  border: none;
+  box-shadow: unset;
+  outline: none;
+}
+
 .rc-collapse > .rc-collapse-item:first-child {
-    border-top: 1px solid #fff !important;
+    border-top: 4px solid rgba(255, 255, 255, 1) !important;
+    border-left: 4px solid rgba(255, 255, 255, 1) !important;
+
 }
 
 .faqCard {
-  border: 1px solid #ecedf0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ecedf0;
   font-family: 'Overpass Mono', monospace;
   font-weight: 300;
@@ -29,7 +38,7 @@
 }
 
 .rc-collapse-item-active {
-  height: auto;
+  height: auto !important;
 }
 
 .arrow {
@@ -41,11 +50,26 @@
 
 .rc-collapse-header {
   color: #fff !important;
-  height: unset;
+  height: auto !important;
+  line-height: unset !important;
 }
 
 .rc-collapse-content {
   background-color: unset;
   color: #fff;
   padding: 0px;
+  font-family: 'Open Sans' !important;
+  font-size: 0.9em;
+  line-height: 1.5em !important;
 }
+
+.rc-collapse-content-box {
+  margin-bottom: 0px !important;
+}
+
+.rc-collapse-content-box > p {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+tr:nth-child(even) {background-color: rgba(255, 255, 255, 0.05);}
