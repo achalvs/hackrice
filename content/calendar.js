@@ -1,5 +1,9 @@
 export const title = "Schedule"
 
+export const dayOne = "Friday, 9/14"
+export const dayTwo = "Saturday, 9/15"
+export const dayThree = "Sunday, 9/16"
+
 export const friday = [
   {
     time: "4:30 PM",
