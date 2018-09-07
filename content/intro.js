@@ -1,4 +1,4 @@
-export const intro = "HackRice 8: the premier hackathon of the south."
+export const intro = "HackRice 8: the premier hackathon of the south.";
 
 export const bullets = [
   {
@@ -28,13 +28,13 @@ export const cards = [
   {
     icon: "https://icon.now.sh/calendar/ffffff",
     title: "Schedule",
-    href: "",
+    to: "calendar",
     text: "Find out when hacking begins and ends, and more →"
   },
   {
     icon: "https://icon.now.sh/question_answer/ffffff",
     title: "FAQs",
-    href: "",
+    to: "faq",
     text: "First timer? Most of your inquiries are answered →"
   },
   {
@@ -46,13 +46,13 @@ export const cards = [
   {
     icon: "https://icon.now.sh/format_shapes/ffffff",
     title: "Judging",
-    href: "",
+    to: "judging",
     text: "How will your project be evaluated? Read on →"
   },
   {
     icon: "https://icon.now.sh/insert_comment/ffffff",
     title: "About",
-    href: "",
+    to: "about",
     text: "Read about the mission behind HackRice →"
   },
   {
@@ -64,22 +64,22 @@ export const cards = [
   {
     icon: "https://icon.now.sh/casino/ffffff",
     title: "Prizes",
-    href: "",
+    to: "faq",
     text: "What can you win at HackRice? Worth a look →"
   },
   {
     icon: "https://icon.now.sh/map/ffffff",
     title: "Maps",
-    href: "",
+    href: "https://www.rice.edu/maps/Rice-University-Color-Campus-Map.pdf",
     text: "Need help finding your way around Rice? →"
   },
   {
     icon: "https://icon.now.sh/slack/ffffff",
     title: "Slack",
-    href: "",
+    href: "https://hackrice8.slack.com",
     text: "Join our Slack to meet hackers & receive updates →"
   }
 ].map(card => {
   card.key = `card-${card.title}`;
   return card;
-})
+});

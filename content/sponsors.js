@@ -1,3 +1,5 @@
+export const title = "Sponsored by"
+
 export const files = [
   {
     name: 'twosigma.svg',

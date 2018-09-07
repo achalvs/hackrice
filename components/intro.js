@@ -1,45 +1,62 @@
-import Link from "next/link"
-import { Box, Container, Card, Flex, Image, theme } from 'rebass'
-import { intro, bullets, cards } from '../content/intro'
-import colors from '../styles/colors.json'
+import * as Scroll from "react-scroll";
+let ScrollingLink = Scroll.Link;
+import Link from "next/link";
+import { Box, Container, Card, Flex, Image, theme } from "rebass";
+import { intro, bullets, cards } from "../content/intro";
+import colors from "../styles/colors.json";
 
 const Intro = () => (
   <div>
-    <Box px={3} pt={3} pb={4} bg={colors['base']} color={colors['gray'][1]}>
-        <Box width='auto' px={2}>
-          <h1 className="introText">{intro}</h1>
-          {bullets.map(({ key, href, button, note, icon }) => (
-            <div key={key} className="introItem">
-              <img className="icon" src={icon}></img>
-              <a href={href} className="styledlink">
-                {button}
-              </a>
-              <span className="spacer" />
-              <span className="note">{note}</span>
-            </div>
-          ))}
-        </Box>
-        <Flex flexWrap="wrap" mx={-2} pt={2}>
-          {cards.map(({ key, href, title, text, icon }) => (
-            <Box key={key} width={[1, 1/2, 1/3]}>
-              <Link href={href}>
-                <div className="card">
-                  <h3>
-                    <img src={icon} />
-                    <span className="spacer" />
-                    <span className="cardTitle">{title}</span>
-                  </h3>
-                  <p>{text}</p>
-                </div>
-              </Link>
-            </Box>
-          ))}
+    <Box px={3} pt={3} pb={4} bg={colors["base"]} color={colors["gray"][1]}>
+      <Box width="auto" px={2}>
+        <h1 className="introText">{intro}</h1>
+        {bullets.map(({ key, href, button, note, icon }) => (
+          <div key={key} className="introItem">
+            <img className="icon" src={icon} />
+            <a href={href} className="styledlink">
+              {button}
+            </a>
+            <span className="spacer" />
+            <span className="note">{note}</span>
+          </div>
+        ))}
+      </Box>
+      <Flex flexWrap="wrap" mx={-2} pt={2}>
+        {cards.map(
+          ({ key, href, to, title, text, icon }) =>
+            href != undefined ? (
+              <Box key={key} width={[1, 1 / 2, 1 / 3]}>
+                <a href={href}>
+                  <div className="card">
+                    <h3>
+                      <img src={icon} />
+                      <span className="spacer" />
+                      <span className="cardTitle">{title}</span>
+                    </h3>
+                    <p>{text}</p>
+                  </div>
+                </a>
+              </Box>
+            ) : (
+              <Box key={key} width={[1, 1 / 2, 1 / 3]}>
+                <ScrollingLink to={to} smooth={true} duration={500}>
+                  <div className="card">
+                    <h3>
+                      <img src={icon} />
+                      <span className="spacer" />
+                      <span className="cardTitle">{title}</span>
+                    </h3>
+                    <p>{text}</p>
+                  </div>
+                </ScrollingLink>
+              </Box>
+            )
+        )}
       </Flex>
     </Box>
     <style jsx global>{`
-
       .introText {
-        font-family: 'Overpass Mono';
+        font-family: "Overpass Mono";
         font-size: 1.5em;
         font-weight: 700;
         text-transform: uppercase;
@@ -82,9 +99,9 @@ const Intro = () => (
       }
 
       .card {
-        border: 1px solid ${colors['gray'][1]};
-        color: ${colors['gray'][1]};
-        font-family: 'Overpass Mono', monospace;
+        border: 1px solid ${colors["gray"][1]};
+        color: ${colors["gray"][1]};
+        font-family: "Overpass Mono", monospace;
         margin: 10px;
         min-height: 110px !important;
         padding: 18px 18px 18px;
@@ -115,16 +132,13 @@ const Intro = () => (
       }
 
       @media (max-width: 575px) {
-
         .note {
           display: block;
           margin-top: 1em;
         }
-
       }
-
     `}</style>
   </div>
-)
+);
 
-export default Intro
+export default Intro;

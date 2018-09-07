@@ -1,14 +1,14 @@
-import { Provider, Heading } from 'rebass'
-import { injectGlobal } from 'styled-components'
+import { Provider, Heading } from "rebass";
+import { injectGlobal } from "styled-components";
 
-import Head from '../components/head'
-import Nav from '../components/nav'
-import Intro from '../components/intro'
-import About from '../components/about'
-import Calendar from '../components/calendar'
-import Questions from '../components/faq'
-import Judging from '../components/judging'
-import Sponsors from '../components/sponsors'
+import Head from "../components/head";
+import Nav from "../components/nav";
+import Intro from "../components/intro";
+import About from "../components/about";
+import Calendar from "../components/calendar";
+import Questions from "../components/faq";
+import Judging from "../components/judging";
+import Sponsors from "../components/sponsors";
 
 // Ensure `grid-styled` Box and Flex components work properly.
 injectGlobal`
@@ -22,21 +22,23 @@ injectGlobal`
       text-decoration: none;
       text-transform: uppercase;
     }
-`
+`;
 
 // Variables for <head>
-let title = 'HackRice 8'
-let url = 'https://hack.rice.edu'
-let ogImage = '../static/og.png'
-let description = 'The premier hackathon of the south.'
+let title = "HackRice 8";
+let url = "https://hack.rice.edu";
+let ogImage = "../static/og.png";
+let description = "The premier hackathon of the south.";
 
 const Home = () => (
-  <Provider theme={{
-    fonts: {
-      sans: "'Open Sans', sans-serif",
-      mono: "'Overpass Mono', monospace",
-    }
-  }}>
+  <Provider
+    theme={{
+      fonts: {
+        sans: "'Open Sans', sans-serif",
+        mono: "'Overpass Mono', monospace"
+      }
+    }}
+  >
     <Head title={title} description={description} url={url} ogImage={ogImage} />
     <Nav />
     <Intro />
@@ -46,6 +48,6 @@ const Home = () => (
     <Judging />
     <Sponsors />
   </Provider>
-)
+);
 
-export default Home
+export default Home;
