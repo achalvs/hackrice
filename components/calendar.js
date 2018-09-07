@@ -1,18 +1,18 @@
 import { Flex, Box } from 'rebass'
-import { title, friday, saturday, sunday } from '../content/calendar'
+import { title, friday, saturday, sunday, dayOne, dayTwo, dayThree } from '../content/calendar'
 import colors from '../styles/colors.json'
 
 const Calendar = () => (
-  <Box mx={-2} style={{background: 'rgba(255, 255, 255, 0.05)'}}bg={colors['white']} color={colors['base']}>
+  <Box mx={-2} bg={colors['gray'][1]} color={colors['base']}>
     <Box mx={4} pt={3}>
-      <h2 className="calTitle">{title}</h2>
+      <h2 className="title">{title}</h2>
     </Box>
     <Flex my={1} pb={3} mx={4} flexWrap="wrap">
-      <Box width={[1, 1/3]}>
-        <h2 className="calDay">Friday 9/14</h2>
-        <ul className="scheduleDay">
+      <Box px={3} width={[1, 1/3]}>
+        <h2 className="dayName">{dayOne}</h2>
+        <ul className="dayContent">
           {friday.map(({ key, title, time, detail }) => (
-            <li key={key} className="scheduleItem">
+            <li key={key} className="dayItem">
               <span className="itemTitle">{title}</span>
               <span className="itemTime">{time}</span>
               <span className="itemDetail">{detail}</span>
@@ -20,11 +20,11 @@ const Calendar = () => (
           ))}
         </ul>
       </Box>
-      <Box width={[1, 1/3]}>
-        <h2 className="calDay">Saturday 9/15</h2>
-        <ul className="scheduleDay">
+      <Box px={3} width={[1, 1/3]}>
+        <h2 className="day">{dayTwo}</h2>
+        <ul className="dayContent">
           {saturday.map(({ key, title, time, detail }) => (
-            <li key={key} className="scheduleItem">
+            <li key={key} className="dayItem">
               <span className="itemTitle">{title}</span>
               <span className="itemTime">{time}</span>
               <span className="itemDetail">{detail}</span>
@@ -32,11 +32,11 @@ const Calendar = () => (
           ))}
         </ul>
       </Box>
-      <Box width={[1, 1/3]}>
-        <h2 className="calDay">Sunday 9/16</h2>
-        <ul className="scheduleDay">
+      <Box px={3} width={[1, 1/3]}>
+        <h2 className="day">{dayThree}</h2>
+        <ul className="dayContent">
           {sunday.map(({ key, title, time, detail }) => (
-            <li key={key} className="scheduleItem">
+            <li key={key} className="dayItem">
               <span className="itemTitle">{title}</span>
               <span className="itemTime">{time}</span>
               <span className="itemDetail">{detail}</span>
@@ -51,22 +51,22 @@ const Calendar = () => (
         font-family: 'Overpass Mono', monospace;
       }
 
-      .calTitle {
+      .title {
         display: inline-block;
         text-transform: uppercase;
-        background: ${colors['gray'][1]};
-        color: ${colors['base']};
+        color: ${colors['white']};
+        background: ${colors['base']};
         padding: 2px 10px;
       }
 
-      .calDay {
+      .dayName {
         font-size: 1.2em;
         font-weight: 600;
-        color: ${colors['white']};
+        color: ${colors['base']};
         text-transform: uppercase;
       }
 
-      .scheduleDay {
+      .dayContent {
         display: inline-block;
         vertical-align: top;
         width: 48%;
@@ -74,13 +74,13 @@ const Calendar = () => (
         margin: 0px;
         list-style-type: none;
         padding: 0;
-        width: 90%;
+        width: 100%;
       }
 
-      .scheduleItem {
-        border: 1px solid ${colors['base']};
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
+      .dayItem {
+        border: 1px solid ${colors['gray'][5]};
+        background: rgba(255, 255, 255, 0.2);
+        color: ${colors['base']};
         padding: 8px 10px;
         transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
         margin-bottom: 1em;
@@ -90,13 +90,13 @@ const Calendar = () => (
         align-items: center;
       }
 
-      .scheduleItem:hover {
-        border: 1px solid ${colors['gray'][2]};
+      .dayItem:hover {
+        border: 1px solid ${colors['base']};
         box-shadow: 0px 3px 5px 2px rgba(97, 100, 178, 0.05);
         transform: scale(1.05);
       }
 
-      .scheduleDay ul li {
+      .dayContent ul li {
         justify-content: space-between;
         flex-flow: row wrap;
         align-content: center;
@@ -115,8 +115,9 @@ const Calendar = () => (
         font-size: 0.8em;
         font-weight: 400;
         font-family: 'Overpass Mono';
-        background: rgba(97, 100, 178, 0.5);
+        background: rgba(97, 100, 178, 0.15);
         padding: 2px 5px;
+        color: ${colors['base']};
       }
 
       .itemDetail {
