@@ -1,7 +1,16 @@
 import Link from "next/link";
-import { Box, Flex, Image } from "rebass";
+import { Box, Flex, Image, Tooltip, Text } from "rebass";
 import colors from "../styles/colors.json";
 import { title, files } from "../content/sponsors";
+import styled from "styled-components";
+
+const CustomTooltip = styled(Tooltip)`
+  &::before {
+    white-space: normal;
+    width: 350px;
+    padding: 1.5em;
+  }
+`;
 
 const Sponsors = () => (
   <Flex flexWrap="wrap" width={1} my={2}>
@@ -15,14 +24,26 @@ const Sponsors = () => (
       my={5}
     >
       <h2 className="title">{title}</h2>
-      {files.map(({ name, height, link }) => (
-        <a href={link}>
-          <Image
-            style={{ margin: "2em 1em", height: `${height}` }}
-            src={`../static/sponsors/${name}`}
-          />
-        </a>
-      ))}
+      {files.map(
+        ({ name, height, link, blurb }) =>
+          blurb === undefined ? (
+            <a href={link}>
+              <Image
+                style={{ margin: "2em 1em", height: `${height}` }}
+                src={`../static/sponsors/${name}`}
+              />
+            </a>
+          ) : (
+            <CustomTooltip text={blurb} className="tooltip">
+              <a href={link}>
+                <Image
+                  style={{ margin: "2em 1em", height: `${height}` }}
+                  src={`../static/sponsors/${name}`}
+                />
+              </a>
+            </CustomTooltip>
+          )
+      )}
     </Flex>
     <style jsx>
       {`
@@ -35,6 +56,10 @@ const Sponsors = () => (
           margin: unset;
           height: 40px;
           font-family: "Overpass Mono", monospace;
+        }
+
+        .tooltip {
+          width: 100px !important;
         }
       `}
     </style>
