@@ -58,10 +58,10 @@ export default class Questions extends React.Component {
 
     return (
       <Element name="faq">
-        <Box mx={1} mt={4}>
+        <Box mx={2} mt={5}>
           <h2 className="title">{title}</h2>
         </Box>
-        <Flex flexDirection="row" flexWrap="wrap" mt={2} mb={4} pt={2}>
+        <Flex flexDirection="row" flexWrap="wrap" mt={2} mb={5} pt={2}>
           {cols}
         </Flex>
         <style jsx>
@@ -70,7 +70,10 @@ export default class Questions extends React.Component {
               display: inline-block;
               text-transform: uppercase;
               background: ${colors["base"]};
-              border: 2px solid ${colors["white"]};
+              border-top: 4px solid rgba(255, 255, 255, 1) !important;
+              border-left: 4px solid rgba(255, 255, 255, 1) !important;
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              font-family: "Overpass Mono", monospace;
               padding: 5px 10px 2px 10px;
               box-sizing: content-box;
               margin: unset;
