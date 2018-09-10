@@ -13,7 +13,12 @@ const CustomTooltip = styled(Tooltip)`
 `;
 
 const Sponsors = () => (
-  <Flex flexWrap="wrap" width={1} my={2}>
+  <Flex
+    flexWrap="wrap"
+    width={1}
+    mb={4}
+    css={{ background: "rgba(97, 100, 178, 0.2)" }}
+  >
     <Flex
       flexWrap="wrap"
       flexDirection="row"
@@ -21,7 +26,7 @@ const Sponsors = () => (
       alignItems="center"
       width={1}
       mx={5}
-      my={5}
+      my={3}
     >
       <h2 className="title">{title}</h2>
       {files.map(
@@ -34,7 +39,7 @@ const Sponsors = () => (
               />
             </a>
           ) : (
-            <CustomTooltip text={blurb} className="tooltip">
+            <CustomTooltip text={blurb}>
               <a href={link}>
                 <Image
                   style={{ margin: "2em 1em", height: `${height}` }}
@@ -56,10 +61,6 @@ const Sponsors = () => (
           margin: unset;
           height: 40px;
           font-family: "Overpass Mono", monospace;
-        }
-
-        .tooltip {
-          width: 100px !important;
         }
       `}
     </style>
