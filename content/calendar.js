@@ -106,7 +106,7 @@ export const saturday = [
       "Take a break in Farnsworth Pavilion from hacking with our Cup Stacking Mini-Event!"
   },
   {
-    time: "8 PM",
+    time: "6 PM",
     title: "Dinner",
     detail: "Tacos-a-Go-Go for our happy hackers!"
   }
@@ -122,7 +122,7 @@ export const sunday = [
     detail: "Judges will have arrived, prepared to evaluate hackers & projects."
   },
   {
-    time: "9 AM",
+    time: "8:30 AM",
     title: "Hacking Ends!",
     detail: "Submissions close on DevPost."
   },
