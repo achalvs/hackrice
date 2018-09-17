@@ -1,8 +1,8 @@
+<img src="https://i.imgur.com/WjGLHZ3.png" width="300" />
+
 # HackRice
 
-![](https://i.imgur.com/WjGLHZ3.png)
-
-> 🚀 This site is deployed at (hack.rice.edu)[https://hack.rice.edu].
+🚀 This site is deployed at [hack.rice.edu](https://hack.rice.edu).
 
 ### About
 
